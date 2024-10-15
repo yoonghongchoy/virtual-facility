@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/virtual-facility/src",
+  "monorepo": true,
+  "root": "apps/virtual-facility",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/virtual-facility/tsconfig.app.json"
+  },
+  "projects": {
+    "virtual-facility": {
+      "type": "application",
+      "root": "apps/virtual-facility",
+      "entryFile": "main",
+      "sourceRoot": "apps/virtual-facility/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/virtual-facility/tsconfig.app.json"
+      }
+    },
+    "workflows-service": {
+      "type": "application",
+      "root": "apps/workflows-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/workflows-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/workflows-service/tsconfig.app.json"
+      }
+    }
+  }
+}
